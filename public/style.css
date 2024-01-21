@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #406278;
+  color: #ffffff;
+}
+
+.converter-container,
+.history-container {
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white container */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  color: #0e0e0e;
+}
+
+.converter-container {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+button {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #dddddd; /* Light gray border */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff; /* White background for inputs and buttons */
+  color: #333333; /* Dark text color */
+}
+select {
+  width: 100%;
+}
+
+button {
+  background-color: #e74c3c; /* Red button with a shade of blue */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.history-container {
+  max-width: 400px;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Semi-transparent white result background */
+  border: 1px solid #dddddd; /* Light gray border */
+  border-radius: 8px;
+  font-size: 18px;
+  color: #333333; /* Dark text color */
+}
+
+#history {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#history li {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: #000 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
