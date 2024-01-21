@@ -1,9 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  padding: 10px;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  gap: 20px;
   margin: 0;
   background-color: #406278;
   color: #ffffff;
@@ -18,8 +21,8 @@ body {
     255,
     0.8
   ); /* Semi-transparent white container */
-  padding: 30px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
   color: #0e0e0e;
 }
@@ -69,6 +72,19 @@ button:hover {
 
 .history-container {
   max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .converter-container,
+  .history-container {
+    padding: 30px;
+    border-radius: 12px;
+  }
 }
 
 #result {
