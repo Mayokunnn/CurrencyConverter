@@ -101,11 +101,15 @@ async function updateHistoryList() {
     const response = await fetch("/history");
     const history = await response.json();
     historyList.innerHTML = "";
-    history.forEach((entry) => {
-      const listItem = document.createElement("li");
-      listItem.innerText = `${entry.amount} ${entry.fromCurrency} to ${entry.result} ${entry.toCurrency}`;
-      historyList.appendChild(listItem);
-    });
+    if (history.length > 0) {
+      history.forEach((entry) => {
+        const listItem = document.createElement("li");
+        listItem.innerText = `${entry.amount} ${entry.fromCurrency} to ${entry.result} ${entry.toCurrency}`;
+        historyList.appendChild(listItem);
+      });
+    } else {
+      historyList.innerHTML = "No conversion history";
+    }
   } catch (error) {
     console.error("Error fetching conversion history:", error);
     // Handle network or other errors
