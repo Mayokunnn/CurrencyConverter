@@ -102,13 +102,6 @@ async function updateHistoryList() {
     const history = await response.json();
     historyList.innerHTML = "";
 
-    if (history.length === 0) {
-      const message = document.createElement("p");
-      message.innerText = "No conversion history yet.";
-      historyList.appendChild(message);
-      return;
-    }
-
     history.forEach((entry) => {
       const listItem = document.createElement("li");
       listItem.innerText = `${entry.amount} ${entry.fromCurrency} to ${entry.result} ${entry.toCurrency}`;
