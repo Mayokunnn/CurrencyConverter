@@ -98,7 +98,7 @@ async function updateHistoryList() {
   historyList.innerHTML = `<div class="loader"></div>`;
 
   try {
-    const response = await fetch("http://localhost:3000/history");
+    const response = await fetch("/history");
     const history = await response.json();
     historyList.innerHTML = "";
     history.forEach((entry) => {

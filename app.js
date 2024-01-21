@@ -38,7 +38,7 @@ app.post("/convert", async (req, res) => {
   // Extract data from the request
   const { fromCurrency, toCurrency, amount, result } = req.body;
 
-  // Create a new CurrencyConversion document
+  // Create a new CurrencyConversion
   const conversion = new CurrencyConversion({
     fromCurrency,
     toCurrency,
