@@ -46,7 +46,7 @@ async function convertCurrency() {
 
   document.getElementById("amount").value = "";
   // Save conversion history
-  saveConversionHistory({ amount, fromCurrency, toCurrency, result });
+  await saveConversionHistory({ amount, fromCurrency, toCurrency, result });
   updateHistoryList();
 }
 
