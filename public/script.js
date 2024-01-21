@@ -108,7 +108,7 @@ async function updateHistoryList() {
         historyList.appendChild(listItem);
       });
     } else {
-      historyList.innerHTML = "No conversion history";
+      historyList.innerHTML = `<p>No conversion history</p>`;
     }
   } catch (error) {
     console.error("Error fetching conversion history:", error);
